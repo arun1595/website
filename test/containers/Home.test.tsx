@@ -38,4 +38,9 @@ describe('<Home />', () => {
     expect(spanComponent).to.have.length(1);
     expect(spanComponent.render().text()).to.equal('MARKET Protocol');
   });
+
+  it('renders the subscribe form with subscriptionPopUpVisible prop', () => {
+    const component = shallow(<HomeComponent subscriptionPopUpVisible />);
+    expect(component.find(Cta).props().subscriptionPopUpVisible).toEqual(true);
+  });
 });

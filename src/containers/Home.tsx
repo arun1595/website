@@ -11,7 +11,11 @@ import BuildDapp from '@components/BuildDapp';
 import Cta from '@components/Cta';
 import ExplainerCta from '@components/ExplainerCta';
 
-export const HomeComponent = () => (
+export const HomeComponent = ({
+  subscriptionPopUpVisible
+}: {
+  subscriptionPopUpVisible: boolean;
+}) => (
   <div>
     <Hero />
     <ExplainerCta />
@@ -31,7 +35,7 @@ export const HomeComponent = () => (
     <Chain />
     <Dapp />
     <BuildDapp />
-    <Cta bg="#f0f0f0" />
+    <Cta subscriptionPopUpVisible={subscriptionPopUpVisible} bg="#f0f0f0" />
   </div>
 );
 
