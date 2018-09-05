@@ -1,6 +1,5 @@
 import React from 'react';
 import { withSiteData } from 'react-static';
-
 import { MarketDescriptionText, MarketDescriptionWrapper } from '@src/Styles';
 
 import Hero from '@components/Hero';
@@ -12,13 +11,15 @@ import Cta from '@components/Cta';
 import ExplainerCta from '@components/ExplainerCta';
 
 export const HomeComponent = ({
-  subscriptionPopUpVisible
+  subscriptionPopUpVisible,
+  enableVideo
 }: {
-  subscriptionPopUpVisible: boolean;
+  subscriptionPopUpVisible?: boolean;
+  enableVideo?: boolean;
 }) => (
   <div>
     <Hero />
-    <ExplainerCta />
+    <ExplainerCta enableVideo={enableVideo} />
     <MarketDescriptionWrapper>
       <MarketDescriptionText>
         <span style={{ color: '#00E2C1', fontWeight: 'bold' }}>
